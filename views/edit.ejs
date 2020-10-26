@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container mt-3">
+    <h3 class="text-center">Cập nhật học sinh</h3>
+
+    <form action="/api/update" method="post" enctype="multipart/form-data">
+      <label hidden for="id">ID</label>
+      <input hidden type="text" name="id" value="<%=data.id%>" value="" class="form-control">
+
+      <label hidden for="StudentID">StudentID</label>
+      <input hidden type="StudentID" name="StudentID" value="<%=data.StudentID%>" class="form-control">
+
+      <label hidden for="ClassID">ClassID</label>
+      <input hidden type="text" name="ClassID" value="<%=data.ClassID%>" class="form-control">
+
+      <label for="StudentName">StudentName</label>
+      <input type="text" name="StudentName" value="<%=data.StudentName%>" class="form-control">
+
+      <label for="birthDay">Birth Day</label>
+      <input type="text" name="birthDay" value="<%=data.birthDay%>" class="form-control">
+
+      <label for="image">Image</label>
+      <input type="file" name="image" value="<%=data.image%>" class="form-control">
+      <input type="submit" value="Update" class="btn btn-primary mt-2"> <br>
+      <a href="/getAll">Quay lại?</a>
+    </form>
+  </div>
+</body>
+
+</html>

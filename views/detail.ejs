@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <a href="addNew" class="btn btn-info">Add New Student</a>
+      <table class="table">
+        <thead>
+          <th>ID</th>
+          <th>StudentID</th>
+          <th>ClassID</th>
+          <th>StudentName</th>
+          <th>BirthDay</th>
+          <th>Image</th>
+        </thead>
+        <tbody>          
+            <tr>
+              <td> <%=data.id%> </td>
+              <td> <%=data.StudentID%> </td>
+              <td> <%=data.ClassID%> </td>
+              <td> <%=data.StudentName%> </td>
+              <td> <%=data.birthDay%> </td>
+              <td>
+                <a href="/api/getOne/<%=data.id%>&<%=data.StudentID%>" class="btn btn-primary">Edit</a>
+              </td>
+            </tr>          
+        </tbody>
+      </table>
+      <div class="viewImage">
+        <img src="https://imagestudent.s3-ap-southeast-1.amazonaws.com/<%=data.image%>"/>
+      </div>
+    </div>
+  </body>
+</html>
